@@ -1,0 +1,11 @@
+@mixin flex ($align, $justify, $dir) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $dir;
+};
+@mixin mobile {
+    @media screen and (max-width:768px) {
+        @content
+    }
+}

@@ -1,0 +1,124 @@
+
+body {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	background: url(../images/bg-pattern-desktop.svg) no-repeat;
+	background-size: cover;
+}
+main {
+	display: flex;
+	height: 100%;
+	width: 100vw;
+	.content {
+		padding-left: 13%;
+		width: 100%;
+		@include flex(flex-start, center, column);
+		.title {
+			width: 35%;
+			img {
+				position: absolute;
+				top: 10%;
+			}
+			h1 {
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				font-size: 4rem;
+				line-height: 4.5rem;
+				color: $Dark_Grayish_Red;
+			}
+			h1::first-line {
+				color: $Desaturated_Red;
+				font-size: 4rem;
+				font-weight: 300;
+			}
+		}
+		.description {
+			margin: 5% 0;
+			width: 70%;
+			p {
+				line-height: 1.75em;
+				color: $Desaturated_Red;
+			}
+		}
+		.btnSection {
+			width: 100%;
+			height: auto;
+			position: relative;
+			.outMess{
+				display: flex;
+				height: 10%;
+				width: 50%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translate(6%, 250%);
+			}
+		}
+		.email {
+			color: $Desaturated_Red;
+			padding-left: 3%;
+			width: 65%;
+			line-height: 3rem;
+			border-radius: 35px;
+			border: 1px solid $Desaturated_Red;
+			background: transparent;
+			
+		}
+		
+		.email:focus{
+			outline: none;
+			border-color: $Desaturated_Red;
+		}
+		
+		::placeholder {
+			color: $Desaturated_Red;
+		}
+		.btn {
+			cursor: pointer;
+			background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+			height: 3.2rem;
+			width: 15%;
+			position: absolute;
+			left: 55%;
+			top: 0;
+			border-radius: 35px;
+			border: hidden;
+			box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+				6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+				12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+				22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+				41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+				100px 100px 80px rgba(0, 0, 0, 0.07);
+			transition: all 0.5s ease-in;
+		}
+		.btn:hover{
+			background: linear-gradient(135deg, hsl(0, 67%, 88%), hsl(0, 66%, 80%));
+		}
+	}
+	.rightSidePic {
+		width: 100%;
+		background: url(../images/hero-desktop.jpg) no-repeat right;
+		background-size: contain;
+	}
+}
+
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+.badEmail{
+	content: url(../images/icon-error.svg);
+	position: absolute;
+	left: 47%;
+	top: 25%;
+	transform: translate(50%, 0%);
+	z-index: 1;
+}

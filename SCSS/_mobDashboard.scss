@@ -1,0 +1,97 @@
+@media screen and (max-width:768px) {
+	
+
+body {
+	@include mobile {
+		background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	}
+}
+main {
+	@include mobile {
+		@include flex(center, center, column);
+	}
+	.content {
+		@include mobile {
+			padding-left: 0;
+		}
+		.title {
+			@include mobile {
+				width: 100%;
+			}
+			.mobPic {
+				content: "";
+				background: url(../images/hero-mobile.jpg) no-repeat center;
+				background-size: contain;
+				height: 30vh;
+				width: 100vw;
+				margin-bottom: 10%;
+			}
+			img {
+				@include mobile {
+					position: absolute;
+					left: 10%;
+					top: 5%;
+				}
+			}
+			h1 {
+				@include mobile {
+					font-size: 3rem;
+					line-height: 3.5rem;
+					text-align: center;
+				}
+			}
+			h1::first-line {
+				@include mobile {
+					font-size: 3rem;
+				}
+			}
+		}
+		.description {
+			@include mobile {
+				text-align: center;
+				margin: 5%;
+				width: 90%;
+			}
+		}
+		.btnSection {
+			@include mobile {
+				text-align: center;
+			}
+			.outMess {
+				@include mobile {
+					width: 100%;
+					transform: translate(15%, 250%);
+				}
+			}
+		}
+		.email {
+			@include mobile {
+				padding-left: 7%;
+				width: 85%;
+			}
+		}
+		.btn {
+			@include mobile {
+				width: 20%;
+				left: 75%;
+			}
+		}
+		.rightSidePic {
+			@include mobile {
+				display: none;
+			}
+		}
+	}
+}
+
+.attribution {
+	@include mobile {
+		display: none;
+	}
+}
+.badEmail{
+	@include mobile {
+		left: 60%;
+	}
+}
+}
